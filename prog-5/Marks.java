@@ -9,7 +9,7 @@ public class Marks {
         System.out.print("Enter your marks: ");
         int a = s1.nextInt();
 
-        String res = a >= 40 ? "Passed" : "Failed";
+        String res = (a >= 40) ? "Passed" : "Failed";
 
         System.out.println("The result is: " + res);
         
