@@ -13,7 +13,7 @@ public class Marks {
 
         System.out.println("The result is: " + res);
         
-
+        s1.close();
     }
 
 }

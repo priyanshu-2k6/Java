@@ -14,6 +14,7 @@ public class GreaterThanTwo {
         int res = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
 
         System.out.println("The greates number among the three is: " + res);
+        s1.close();
     }
 
 }
