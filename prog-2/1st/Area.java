@@ -13,8 +13,11 @@ public class Area {
             double A = Math.sqrt(s * (s - a) * (s - b) * (s - c));
             System.out.println("Area of triangle is: " + A);
         } else {
-            System.out.println("Triangle not possible with these sides");
+            System.out.println("Triangle is not possible with these sides");
         }
         s1.close();
     }
 }
+
+
+
