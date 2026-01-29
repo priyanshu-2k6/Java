@@ -2,7 +2,7 @@ class Person{
     String name;
     Person(){
         System.out.println("Default constructor was called.");
-        name="Unknown";
+        name="Default Person";
     }
     void displayInfo(){
         System.out.println("Name: "+name);

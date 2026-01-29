@@ -1,19 +1,14 @@
 
 
-class Shapes{
-	
+class Shapes{	
 	String type;
-	double radius, length, width,perimeter,area;
-	
-	Shapes(double r){
-		
+	double radius, length, width,perimeter,area;	
+	Shapes(double r){		
 		type = "Circle";
 		radius = r;
 		area = Math.PI*r*r;
-		perimeter = 2*Math.PI*r;
-		
-	}
-	
+		perimeter = 2*Math.PI*r;		
+	}	
 	Shapes(double l, double w){
 		if(!(l==w)){
 			type = "Rectangle";
@@ -27,47 +22,34 @@ class Shapes{
 		length = l;
 		area = l*l;
 		perimeter = 4*l;
-	}
-	
-	void display(){
-		
-		if(type=="Circle"){
-			
+	}	
+	void display(){		
+		if(type=="Circle"){			
 			System.out.println("Type = "+type);
 			System.out.println("Radius = "+radius);
 			System.out.println("Area = "+area);
 			System.out.println("Perimeter = "+perimeter);
-			return;
-			
+			return;			
 		}
-		else if(type=="Rectangle"){
-			
+		else if(type=="Rectangle"){			
 			System.out.println("Type = "+type);
 			System.out.println("Length = "+length);
 			System.out.println("Width = "+width);
 			System.out.println("Area = "+area);
 			System.out.println("Perimeter = "+perimeter);
-			return;
-			
+			return;			
 		}
 		System.out.println("Type = "+type);
 		System.out.println("Side length = "+length);
 		System.out.println("Area = "+area);
-		System.out.println("Perimeter = "+perimeter);
-		
-	}
-	
+		System.out.println("Perimeter = "+perimeter);		
+	}	
 }
-
-public class GeoSha{
-	
-	public static void main(String[] args){
-		
+public class GeoSha{	
+	public static void main(String[] args){		
 		Shapes s1 = new Shapes(5), s2 = new Shapes(2,4), s3 = new Shapes(2,2);
 		s1.display();
 		s2.display();
-		s3.display();
-		
-	}
-	
+		s3.display();		
+	}	
 }
