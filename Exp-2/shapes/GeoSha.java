@@ -1,5 +1,3 @@
-
-
 class Shapes{	
 	String type;
 	double radius, length, width,perimeter,area;	
