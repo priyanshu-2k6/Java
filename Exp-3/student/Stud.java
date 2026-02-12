@@ -47,38 +47,28 @@ class Student {
 public class Stud {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter student name: ");
         String name = sc.nextLine();
-
         System.out.print("Enter student age: ");
         int age = sc.nextInt();
-
         System.out.print("Enter student GPA: ");
         double gpa = sc.nextDouble();
-
         Student student = new Student(name, age, gpa);
         System.out.println("\n--- Student Details ---");
         System.out.println("Name: " + student.getName());
         System.out.println("Age: " + student.getAge());
         System.out.println("GPA: " + student.getGpa());
-
         System.out.print("\nEnter new name: ");
         sc.nextLine();
         student.setName(sc.nextLine());
-
         System.out.print("Enter new age: ");
         student.setAge(sc.nextInt());
-
         System.out.print("Enter new GPA: ");
         student.setGpa(sc.nextDouble());
-
         System.out.println("\n--- New Student Details ---");
         System.out.println("Name: " + student.getName());
         System.out.println("Age: " + student.getAge());
         System.out.println("GPA: " + student.getGpa());
-
         sc.close();
-
     }
 }

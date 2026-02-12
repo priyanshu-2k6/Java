@@ -4,7 +4,6 @@ class student {
   String regNumber;
   String Name;
   String city;
-
   public void set_profile(Scanner input) {
     System.out.print("Enter your regNumber: ");
     this.regNumber = input.next();
@@ -13,11 +12,9 @@ class student {
     System.out.print("Enter your City: ");
     this.city = input.next();
   }
-
   public void view_profile() {
     System.out.println(this.Name+" " + this.regNumber+" " + this.city);
   }
-
   public static void search(student t[], String inputName) {
     boolean found = false;
     for (int i = 0; i < t.length; i++) {
@@ -32,27 +29,17 @@ class student {
     }
   }
 }
-
 public class Stud {
   public static void main(String args[]) {
-
     Scanner input = new Scanner(System.in);
-
-    // declaring an array of objects for a class
     student[] java = new student[3];
-
-    // allocation of memory for student objects
     for (int i = 0; i < java.length; i++) {
       java[i] = new student();
     }
-
-    // calling the methods for each object
     for (int i = 0; i < java.length; i++) {
       java[i].set_profile(input);
       java[i].view_profile();
     }
-
-    // calling the search method
     System.out.print("Enter the name to search: ");
     String searchName = input.next();
     student.search(java, searchName);

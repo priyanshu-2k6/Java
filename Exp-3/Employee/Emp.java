@@ -1,7 +1,6 @@
 import java.util.*;
 
 class Employee {
-
     private int eid;
     private String name, dob;
     private long phone;
@@ -26,7 +25,6 @@ class Employee {
 
     public static void Sort_Employee(Employee[] s) {
         Employee temp;
-
         for (int i = 0; i < s.length - 1; i++) {
             for (int j = i + 1; j < s.length; j++) {
                 if (s[i] != null && s[j] != null) {
@@ -39,7 +37,6 @@ class Employee {
             }
         }
     }
-
 }
 
 public class Emp {
