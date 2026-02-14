@@ -12,12 +12,20 @@ class Car extends Vehicle {
     }
 }
 
+class ElectricCar extends Car {
+    int batteryCapacity = 100;
+
+    void displayBattery() {
+        System.out.println("Battery Capacity: " + batteryCapacity
+                + " kWh");
+    }
+}
 
 public class Multi {
     public static void main(String[] args) {
-        Car BYD = new Car();
+        ElectricCar BYD = new ElectricCar();
         BYD.move();
         BYD.displayBrand();
-        // BYD.displayBattery();
+        BYD.displayBattery();
     }
 }
