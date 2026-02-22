@@ -164,6 +164,7 @@ class MatrixCalculator extends Calculator {
 
 public class Cal {
     public static double err = 99999999999.0;
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Scientific / Matrix Calculator");
