@@ -1,0 +1,10 @@
+Beverage,Masala Chai,60,Strong black tea brewed with milk and aromatic Indian spices. Comforting and refreshing traditional hot drink.
+Beverage,Sweet Lassi,90,Thick yogurt-based drink blended with sugar. Creamy and cooling Punjabi classic served chilled.
+Beverage,Mango Lassi,110,Smooth yogurt drink blended with ripe mango pulp. Sweet and refreshing summer favorite.
+Beverage,Fresh Lime Soda,70,Fresh lime juice mixed with soda and sugar or salt. Light and fizzy thirst quencher.
+Beverage,Cold Coffee,120,Chilled coffee blended with milk and ice cream. Sweet and frothy café-style beverage.
+Beverage,Filter Coffee,80,South Indian style strong brewed coffee with milk. Rich aroma and bold flavor.
+Beverage,Butter Milk,50,Spiced yogurt drink seasoned with cumin and coriander. Light and cooling digestive beverage.
+Beverage,Rose Milk,95,Cold milk flavored with rose syrup. Sweet fragrant drink served chilled.
+Beverage,Green Tea,75,Lightly brewed green tea leaves. Mild earthy flavor known for its health benefits.
+Beverage,Chocolate Milkshake,140,Milk blended with chocolate syrup and ice cream. Thick creamy and indulgent treat.
