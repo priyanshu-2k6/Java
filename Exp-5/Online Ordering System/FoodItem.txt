@@ -1,0 +1,10 @@
+Chicken,Butter Chicken,320,Slow-cooked chicken in rich tomato and butter gravy. Creamy North Indian curry flavored with aromatic spices.
+Mutton,Rogan Josh,380,Tender mutton cooked in Kashmiri red chili gravy. Traditional aromatic curry with deep rich flavors.
+Fish,Amritsari Fish Fry,300,Spiced fish fillets coated in gram flour batter. Deep fried until crispy and served with mint chutney.
+Egg,Egg Curry,180,Boiled eggs simmered in spicy onion tomato masala. Comforting homestyle curry best enjoyed with rice or roti.
+Paneer,Paneer Butter Masala,260,Soft paneer cubes cooked in creamy tomato gravy. Mildly sweet and rich curry popular across India.
+Potato,Aloo Gobi,190,Potatoes and cauliflower sautéed with Indian spices. Dry curry flavored with turmeric and cumin.
+Chickpea,Chole Masala,200,Chickpeas cooked in tangy onion tomato gravy. Punjabi style curry packed with bold spices.
+Lentil,Dal Tadka,170,Yellow lentils tempered with garlic and cumin. Simple yet flavorful staple served with steamed rice.
+Spinach,Palak Paneer,240,Paneer cubes simmered in smooth spinach gravy. Nutritious North Indian dish rich in iron and flavor.
+Chicken,Chicken Biryani,350,Fragrant basmati rice layered with spiced chicken. Slow-cooked dum style biryani with aromatic herbs.
