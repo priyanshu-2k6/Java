@@ -118,7 +118,7 @@ class MatrixCalculator extends Calculator {
         System.out.println("Addition of the given matrices: ");
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                System.out.print(res[i][j] + " ");
+                System.out.print(res[i][j] + "\t");
             }
             System.out.println();
         }
@@ -136,16 +136,16 @@ class MatrixCalculator extends Calculator {
         System.out.println("Subtraction of the given matrices: ");
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                System.out.print(res[i][j] + " ");
+                System.out.print(res[i][j] + "\t");
             }
             System.out.println();
         }
     }
 
     void matrixMul(double[][] a, double[][] b) {
-        int m = a.length;       // rows of a
-        int p = a[0].length;    // columns of a
-        int n = b[0].length;    // columns of b
+        int m = a.length; // rows of a
+        int p = a[0].length; // columns of a
+        int n = b[0].length; // columns of b
         double[][] res = new double[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
@@ -157,7 +157,7 @@ class MatrixCalculator extends Calculator {
         System.out.println("Multiplication of given matrices:");
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                System.out.print(res[i][j] + " ");
+                System.out.print(res[i][j] + "\t");
             }
             System.out.println();
         }
@@ -269,14 +269,14 @@ public class Cal {
                     double[][] m1 = new double[j][k];
                     double[][] m2 = new double[j][k];
                     for (int g = 0; g < j; g++) {
-                        for (int h = 0; h < k; k++) {
-                            m1[j][k] = s.nextDouble();
+                        for (int h = 0; h < k; h++) {
+                            m1[g][h] = s.nextDouble();
                         }
                     }
                     System.out.println("\nMatrix 2:");
                     for (int g = 0; g < j; g++) {
-                        for (int h = 0; h < k; k++) {
-                            m2[j][k] = s.nextDouble();
+                        for (int h = 0; h < k; h++) {
+                            m2[g][h] = s.nextDouble();
                         }
                     }
                     switch (c) {
@@ -300,13 +300,13 @@ public class Cal {
                     double[][] m4 = new double[c1][c2];
                     for (int i = 0; i < r1; i++) {
                         for (int l = 0; l < c1; l++) {
-                            m3[r1][c1] = s.nextDouble();
+                            m3[i][l] = s.nextDouble();
                         }
                     }
                     System.out.println("Matrix 2:");
                     for (int i = 0; i < c1; i++) {
                         for (int l = 0; l < c2; l++) {
-                            m4[c1][c2] = s.nextDouble();
+                            m4[i][l] = s.nextDouble();
                         }
                     }
                     m.matrixMul(m3, m4);
