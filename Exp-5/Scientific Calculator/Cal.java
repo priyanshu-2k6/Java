@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
 abstract class Calculator {
-    public static double err = 99999999999.0;
-
     abstract double add(double x, double y);
 
     abstract double subtract(double x, double y);
@@ -33,7 +31,7 @@ class ScientificCalculator extends Calculator {
     double divide(double a, double b) {
         if (b == 0) {
             System.out.println("Denominator can't be zero...");
-            return err;
+            return Cal.err;
         } else {
             return a / b;
         }
@@ -50,7 +48,7 @@ class ScientificCalculator extends Calculator {
     double log(double a, double b) {
         if (b <= 1) {
             System.out.println("Base can't be less than or equal to 1...");
-            return err;
+            return Cal.err;
         } else {
             return Math.log(a) / Math.log(b);
         }
@@ -100,7 +98,7 @@ class MatrixCalculator extends Calculator {
     @Override
     double divide(double a, double b) {
         if (b == 0) {
-            return err;
+            return Cal.err;
         } else {
             return a / b;
         }
@@ -165,6 +163,7 @@ class MatrixCalculator extends Calculator {
 }
 
 public class Cal {
+    public static double err = 99999999999.0;
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Scientific / Matrix Calculator");
@@ -191,7 +190,7 @@ public class Cal {
                             System.out.println("Result = " + sci.subtract(d, e));
                             break;
                         case 3:
-                            if (sci.divide(d, e) == Calculator.err) {
+                            if (sci.divide(d, e) == err) {
                                 break;
                             }
                             System.out.println("Result = " + sci.divide(d, e));
@@ -203,7 +202,7 @@ public class Cal {
                             System.out.println("Result = " + sci.power(d, e));
                             break;
                         case 6:
-                            if (sci.log(d, e) == Calculator.err) {
+                            if (sci.log(d, e) == err) {
                                 break;
                             }
                             System.out.println("Result = " + sci.log(d, e));
