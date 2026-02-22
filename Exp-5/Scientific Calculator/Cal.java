@@ -10,7 +10,7 @@ abstract class Calculator {
     abstract double multiply(double x, double y);
 
     abstract double divide(double x, double y);
-    
+
 }
 
 class ScientificCalculator extends Calculator {
@@ -143,12 +143,13 @@ class MatrixCalculator extends Calculator {
     }
 
     void matrixMul(double[][] a, double[][] b) {
-        int m = a.length;
-        int n = (m > 0) ? a[0].length : 0;
+        int m = a.length;       // rows of a
+        int p = a[0].length;    // columns of a
+        int n = b[0].length;    // columns of b
         double[][] res = new double[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                for (int k = 0; k < m; k++) {
+                for (int k = 0; k < p; k++) {
                     res[i][j] += multiply(a[i][k], b[k][j]);
                 }
             }
@@ -167,14 +168,14 @@ public class Cal {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Scientific / Matrix Calculator");
-        System.out.println("1. Scientific Calculations\n2. Matrix Calculations\nEnter choice:");
+        System.out.print("1. Scientific Calculations\n2. Matrix Calculations\nEnter choice:");
         int a = s.nextInt();
         if (a == 1) {
             int b, c;
             double d, e;
             ScientificCalculator sci = new ScientificCalculator();
             System.out.println();
-            System.out.println(
+            System.out.print(
                     "1. Addition\n2. Subtraction\n3. Division\n4. Multiplication\n5. Exponential\n6. Logarithmic\n7. Trigonometric\nEnter choice:");
             b = s.nextInt();
             switch (b) {
@@ -211,13 +212,13 @@ public class Cal {
                     break;
                 case 7:
                     System.out.println();
-                    System.out.println("1. Sin\n2. Cos\n3. Tan\n4. Sin^-1\n5. Cos^-1\n6. Tan^-1\nEnter choice:");
+                    System.out.print("1. Sin\n2. Cos\n3. Tan\n4. Sin^-1\n5. Cos^-1\n6. Tan^-1\nEnter choice:");
                     c = s.nextInt();
-                    if (c < 1 || c > 6){
+                    if (c < 1 || c > 6) {
                         System.out.println("Enter a valid choice...");
                         break;
                     }
-                    System.out.println("Enter angle in radians: ");
+                    System.out.print("Enter angle in radians: ");
                     d = s.nextDouble();
                     switch (c) {
                         case 1:
@@ -254,9 +255,64 @@ public class Cal {
                     System.out.println("Enter a valid choice...");
                     break;
             }
-        }
-        else if (a==2) {
-            
+        } else if (a == 2) {
+            MatrixCalculator m = new MatrixCalculator();
+            System.out.println();
+            System.out.println("1. Matrix addition\n2. Matrix subtraction\n3. Matrix multiplication\nEnter choice:");
+            int c = s.nextInt();
+            switch (c) {
+                case 1, 2:
+                    System.out.println("Enter number of rows and columns:");
+                    int j = s.nextInt();
+                    int k = s.nextInt();
+                    System.out.println("Enter the two matrices below\nMatrix 1:");
+                    double[][] m1 = new double[j][k];
+                    double[][] m2 = new double[j][k];
+                    for (int g = 0; g < j; g++) {
+                        for (int h = 0; h < k; k++) {
+                            m1[j][k] = s.nextDouble();
+                        }
+                    }
+                    System.out.println("\nMatrix 2:");
+                    for (int g = 0; g < j; g++) {
+                        for (int h = 0; h < k; k++) {
+                            m2[j][k] = s.nextDouble();
+                        }
+                    }
+                    switch (c) {
+                        case 1:
+                            m.matrixAdd(m1, m2);
+                            break;
+                        case 2:
+                            m.matrixSub(m1, m2);
+                            break;
+                    }
+                    break;
+
+                case 3:
+                    System.out.println("Enter rows and columns of 1st matrix:");
+                    int r1 = s.nextInt();
+                    int c1 = s.nextInt();
+                    System.out.print("Enter only column of 2nd matrix: ");
+                    int c2 = s.nextInt();
+                    System.out.println("Enter the matrices:\nMatrix 1:");
+                    double[][] m3 = new double[r1][c1];
+                    double[][] m4 = new double[c1][c2];
+                    for (int i = 0; i < r1; i++) {
+                        for (int l = 0; l < c1; l++) {
+                            m3[r1][c1] = s.nextDouble();
+                        }
+                    }
+                    System.out.println("Matrix 2:");
+                    for (int i = 0; i < c1; i++) {
+                        for (int l = 0; l < c2; l++) {
+                            m4[c1][c2] = s.nextDouble();
+                        }
+                    }
+                    m.matrixMul(m3, m4);
+                    break;
+            }
+
         }
         s.close();
     }
