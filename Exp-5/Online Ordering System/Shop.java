@@ -217,7 +217,7 @@ public class Shop {
                     for (int j = 0; j < ord; j++) {
                         System.out.println((j + 1) + ". " + order[j]);
                     }
-                    System.out.println("Total ODV = Rs. "+total);
+                    System.out.println("Total Order Value = Rs. "+total);
                     System.out.println("\nPlace order? :    1. Yes  2. No");
                     int c = s.nextInt();
                     if (c == 1) {
