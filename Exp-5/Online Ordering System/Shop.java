@@ -221,7 +221,7 @@ public class Shop {
                     System.out.println("\nPlace order? :    1. Yes  2. No");
                     int c = s.nextInt();
                     if (c == 1) {
-                        System.out.println("Thank you for using out Online Catering Services !!!\nPlease Visit Again :D");
+                        System.out.println("Thank you for using our Online Catering Services !!!\nPlease Visit Again :D");
                         System.exit(0);
                     }
                     else {
